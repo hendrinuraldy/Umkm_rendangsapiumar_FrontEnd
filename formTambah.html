@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Menu</title>
+    <link rel="stylesheet" href="formTambah.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card-container">
+            <div class="left">
+                <div class="left-container">
+                    <h2>Tentang Form</h2>
+                    <p>Ini merupakan bagian form penambah menu</p>
+                    <br>
+                    <p>Bantu kami dengan men Like </p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-container">
+                    <form action="">
+                        <h2 class="lg-view">Menu yang ditambahkan</h2>
+                        <h2 class="sm-view">Menu yang ditambahkan</h2>
+                        
+                        <input type="text" placeholder="Nama Menu">
+                        <div>
+                        <img id="img" src="choose.png" height="100">
+                    </div>
+                        <input id="input" type="file">
+                        <button>Buat</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script >
+        let img = document.getElementById('img');
+        let input = document.getElementById('input');
+        input.onchange = (e) => {
+        if (input.files[0])
+         img.src = URL.createObjectURL(input.files[0]);
+  }
+    </script>
+</body>
+
+</html>
